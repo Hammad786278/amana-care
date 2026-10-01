@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base ─────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-sans text-brand-dark antialiased;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: 2px solid #1268C4;
+    outline-offset: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ── Components ───────────────────────────────────────────── */
+@layer components {
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-navy text-white font-semibold rounded-md transition-all duration-200 hover:bg-brand-blue hover:shadow-lg active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2;
+  }
+
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-green text-white font-semibold rounded-md transition-all duration-200 hover:bg-green-700 hover:shadow-lg active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand-navy text-brand-navy font-semibold rounded-md transition-all duration-200 hover:bg-brand-navy hover:text-white active:scale-95;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-md transition-all duration-200 hover:bg-white hover:text-brand-navy active:scale-95;
+  }
+
+  .btn-orange {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange text-white font-semibold rounded-md transition-all duration-200 hover:bg-orange-600 hover:shadow-lg active:scale-95;
+  }
+
+  /* Section */
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Service Icon Container */
+  .icon-container {
+    @apply w-14 h-14 rounded-xl flex items-center justify-center;
+  }
+
+  /* Hero Overlay */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(11,59,115,0.92) 0%, rgba(11,59,115,0.75) 60%, rgba(18,104,196,0.4) 100%);
+  }
+
+  /* Section Badge */
+  .section-badge {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue text-sm font-semibold rounded-full border border-brand-blue/20 mb-4;
+  }
+}
+
+/* ── Utilities ────────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #0B3B73 0%, #1268C4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, #0B3B73 0%, #10233F 100%);
+  }
+
+  .bg-cta-gradient {
+    background: linear-gradient(135deg, #0B3B73 0%, #1268C4 100%);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.7s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.7s ease-out forwards;
+  }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F5F8FC; }
+::-webkit-scrollbar-thumb { background: #1268C4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #0B3B73; }
+
+/* ── Mobile Bottom Bar Clearance ──────────────────────────── */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 72px;
+  }
+}
+
+/* ── Lightbox ─────────────────────────────────────────────── */
+.lightbox-open {
+  overflow: hidden;
+}
