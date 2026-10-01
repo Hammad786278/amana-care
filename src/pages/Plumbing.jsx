@@ -1,6 +1,7 @@
 import ServicePageLayout from '../components/sections/ServicePageLayout';
 import PageSEO from '../components/common/PageSEO';
 import { SERVICES } from '../data/services';
+import heroImg from '../assets/brand/team-reference.jpeg';
 
 const service = SERVICES.find(s => s.id === 'plumbing');
 
@@ -12,7 +13,7 @@ export default function Plumbing() {
         description="Professional plumbing services including water leakage repair, pipe work and drainage in Riyadh. Amana Care Maintenance — call 0595304358."
         canonical="/services/plumbing"
       />
-      <ServicePageLayout service={service} />
+      <ServicePageLayout service={service} image={heroImg} />
     </>
   );
 }

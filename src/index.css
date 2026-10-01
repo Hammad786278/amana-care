@@ -43,54 +43,63 @@
 
   /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-navy text-white font-semibold rounded-md transition-all duration-200 hover:bg-brand-blue hover:shadow-lg active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-navy text-white font-semibold rounded-lg transition-all duration-200 hover:bg-brand-blue hover:shadow-md active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2;
   }
 
   .btn-green {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-green text-white font-semibold rounded-md transition-all duration-200 hover:bg-green-700 hover:shadow-lg active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-green text-white font-semibold rounded-lg transition-all duration-200 hover:bg-green-700 hover:shadow-md active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-green focus-visible:ring-offset-2;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand-navy text-brand-navy font-semibold rounded-md transition-all duration-200 hover:bg-brand-navy hover:text-white active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-brand-navy text-brand-navy font-semibold rounded-lg transition-all duration-200 hover:bg-brand-navy hover:text-white active:scale-95;
   }
 
   .btn-outline-white {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-md transition-all duration-200 hover:bg-white hover:text-brand-navy active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-white text-white font-semibold rounded-lg transition-all duration-200 hover:bg-white hover:text-brand-navy active:scale-95;
   }
 
   .btn-orange {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-orange text-white font-semibold rounded-md transition-all duration-200 hover:bg-orange-600 hover:shadow-lg active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-brand-orange text-white font-semibold rounded-lg transition-all duration-200 hover:bg-orange-600 hover:shadow-md active:scale-95;
   }
 
-  /* Section */
+  /* Section Padding (Reduced per client request) */
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-8 md:py-12 lg:py-14;
+  }
+
+  .section-padding-sm {
+    @apply py-6 md:py-8;
   }
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Card */
+  /* Card Hover */
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-brand-blue;
+  }
+
+  /* Clickable Card Utility */
+  .card-clickable {
+    @apply cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-xl active:scale-[0.98];
   }
 
   /* Service Icon Container */
   .icon-container {
-    @apply w-14 h-14 rounded-xl flex items-center justify-center;
+    @apply w-12 h-12 rounded-xl flex items-center justify-center;
   }
 
   /* Hero Overlay */
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(11,59,115,0.92) 0%, rgba(11,59,115,0.75) 60%, rgba(18,104,196,0.4) 100%);
+    background: linear-gradient(135deg, rgba(11,59,115,0.92) 0%, rgba(11,59,115,0.78) 60%, rgba(18,104,196,0.45) 100%);
   }
 
   /* Section Badge */
   .section-badge {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue text-sm font-semibold rounded-full border border-brand-blue/20 mb-4;
+    @apply inline-flex items-center gap-2 px-3.5 py-1 bg-brand-blue/10 text-brand-blue text-xs font-semibold rounded-full border border-brand-blue/20 mb-3;
   }
 }
 
